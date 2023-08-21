@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nsid", "src\Nsid\Nsid.cspro
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A4E6D00D-5953-40FE-BA89-07847E344750}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FAD5BBA4-A23F-43DB-9973-52F43029707D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nsid.Tests", "tests\Nsid.Tests\Nsid.Tests.csproj", "{BBBBBE6E-31E0-4462-B73C-ECB60FE014D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,8 +18,13 @@ Global
 		{DEF8BFDF-D1E1-42AF-984B-0D39481D3998}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEF8BFDF-D1E1-42AF-984B-0D39481D3998}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEF8BFDF-D1E1-42AF-984B-0D39481D3998}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBBBBE6E-31E0-4462-B73C-ECB60FE014D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBBBBE6E-31E0-4462-B73C-ECB60FE014D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBBBBE6E-31E0-4462-B73C-ECB60FE014D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBBBBE6E-31E0-4462-B73C-ECB60FE014D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{DEF8BFDF-D1E1-42AF-984B-0D39481D3998} = {A4E6D00D-5953-40FE-BA89-07847E344750}
+		{BBBBBE6E-31E0-4462-B73C-ECB60FE014D7} = {FAD5BBA4-A23F-43DB-9973-52F43029707D}
 	EndGlobalSection
 EndGlobal

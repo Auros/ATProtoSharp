@@ -1,7 +1,9 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using System.Runtime.CompilerServices;
 using System.Text;
 using Nsid.Exceptions;
 
+[assembly: InternalsVisibleTo("Nsid.Tests")]
 namespace Nsid;
 
 /// <summary>
@@ -159,7 +161,10 @@ public sealed class Nsid
         for (int i = 0; i < segments.Count - 1; i++)
         {
             var segment = segments[i];
-            if (63 > segment.Length)
+            if (segment[0] is '-')
+                return CreateResult.DomainAuthoritySegmentStartsWithHyphen;
+            
+            if (segment.Length > 63)
                 return CreateResult.DomainAuthoritySegmentTooLong;
             
             sb.Append(segment).Append('.');
@@ -168,7 +173,7 @@ public sealed class Nsid
 
         value = sb.ToString();
         domainAuthority = value[..(sb.Length - (name.Length + 1))];
-        return 253 > domainAuthority.Length ? CreateResult.DomainAuthorityTooLong : CreateResult.Success;
+        return domainAuthority.Length > 253 ? CreateResult.DomainAuthorityTooLong : CreateResult.Success;
     }
 
     public override string ToString()
